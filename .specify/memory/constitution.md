@@ -1,55 +1,145 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Physical AI & Humanoid Robotics Textbook Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Content Fidelity
+All content must be derived strictly from provided source documents. Zero hallucination tolerance. Every concept, fact, and technical detail must be traceable to source material. If source material is incomplete, flag the gap rather than inventing content.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Academic Rigor
+Material must meet university-level standards for a complete course on Physical AI & Humanoid Robotics. Coverage spans beginner to advanced levels with clear progression. Engineering accuracy takes absolute priority over accessibility, though both must be achieved.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Structural Completeness
+The textbook consists of exactly 5 chapters. Each chapter is a complete, independent learning unit covering a major domain. No missing concepts within scope. Each chapter must be self-contained enough to be studied independently while contributing to the overall course narrative.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Docusaurus Compatibility (NON-NEGOTIABLE)
+Every chapter outputs as a valid Docusaurus document. Proper frontmatter, markdown syntax, and navigation structure. No custom extensions that break Docusaurus rendering. All code blocks properly fenced with language identifiers.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Pedagogical Structure
+Each chapter follows a consistent teaching architecture:
+- Clear learning objectives at the start
+- Concept introduction with definitions
+- Progressive complexity (beginner → intermediate → advanced)
+- Worked examples and code samples
+- Visual aids described in text (diagrams, flowcharts, tables)
+- Summary and review questions
+- References to related chapters
 
-### [PRINCIPLE_6_NAME]
+### VI. Engineering Focus
+Zero marketing fluff. Zero promotional language. Pure technical content. Real-world engineering tradeoffs discussed openly. Limitations and challenges presented alongside capabilities. Code examples must be production-quality, not toy demonstrations.
 
+### VII. Multi-Modal Learning
+Effective use of:
+- **Code blocks**: Working examples with clear comments
+- **Tables**: For comparisons, specifications, parameter lists
+- **Diagram descriptions**: Detailed text descriptions of visual concepts (actual diagrams generated separately)
+- **Mathematical notation**: Using proper LaTeX/markdown math
+- **Callouts/Admonitions**: For warnings, tips, important notes
 
-[PRINCIPLE__DESCRIPTION]
+## Content Standards
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Completeness Requirements
+- All concepts from source material must be included
+- No concept may be referenced before it is introduced
+- Prerequisites must be explicit
+- Forward references must be intentional and noted
+- Glossary terms defined on first use
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Code Quality Standards
+- All code examples must be syntactically correct
+- Language and framework versions specified
+- Dependencies and imports explicit
+- Comments explain WHY not WHAT
+- Code examples demonstrate single concepts clearly
+- Full working examples provided for complex integrations
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Accuracy Standards
+- Technical specifications verified against source
+- Mathematical formulas reviewed for correctness
+- Citations and references to source material
+- Version-specific information clearly marked
+- Known issues and limitations documented
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Chapter Structure
+
+### Fixed Architecture
+1. **Chapter Frontmatter** (Docusaurus metadata)
+2. **Learning Objectives** (3-5 concrete outcomes)
+3. **Prerequisites** (what readers should know)
+4. **Introduction** (motivation and context)
+5. **Core Content** (organized in logical sections)
+6. **Practical Examples** (hands-on implementations)
+7. **Advanced Topics** (deeper dives)
+8. **Summary** (key takeaways)
+9. **Review Questions** (test comprehension)
+10. **Further Reading** (optional extensions)
+
+### Chapter Distribution (5 Total)
+Each chapter covers a major domain:
+- Foundations and fundamentals
+- Core algorithms and methods
+- System integration and architecture
+- Advanced techniques and applications
+- Real-world deployment and case studies
+
+*Exact chapter titles determined during specification phase*
+
+## Quality Gates
+
+### Pre-Publication Checklist
+- [ ] All content sourced from provided documents
+- [ ] Zero hallucinated facts or invented concepts
+- [ ] Docusaurus syntax validated
+- [ ] Code examples tested (where executable)
+- [ ] Learning progression verified (beginner → advanced)
+- [ ] No marketing language or promotional content
+- [ ] All diagrams described textually
+- [ ] Math notation properly formatted
+- [ ] Cross-references valid
+- [ ] Chapter independence verified
+
+### Review Criteria
+- Engineering accuracy (absolute requirement)
+- Pedagogical effectiveness (teaching quality)
+- Structural completeness (no gaps)
+- Technical depth appropriate to level
+- Clarity without sacrificing precision
+
+## Workflow
+
+### Development Process
+1. **Specification Phase**: Receive and analyze source documents
+2. **Chapter Planning**: Define 5 chapter scopes with outline
+3. **Content Extraction**: Map source material to chapters
+4. **Drafting**: Write each chapter following structure
+5. **Validation**: Check against quality gates
+6. **Review**: User approval before next chapter
+7. **Iteration**: Refine based on feedback
+
+### Output Format
+- One Docusaurus-compatible `.md` file per chapter
+- Proper frontmatter with chapter metadata
+- Organized in `/docs` directory structure
+- Navigation configured in `sidebars.js`
+- All assets (code, diagrams) properly referenced
+
+## Constraints
+
+### What We Don't Do
+- No content not backed by source material
+- No oversimplification that loses technical accuracy
+- No custom markdown extensions
+- No incomplete chapters or placeholders
+- No "coming soon" sections
+- No external dependencies not in source docs
+
+### Scope Boundaries
+- In Scope: Content from provided source documents, standard Docusaurus features, universally supported markdown syntax
+- Out of Scope: Original research, opinion pieces, tool comparisons not in source, interactive simulations
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution defines the non-negotiable standards for the Physical AI & Humanoid Robotics textbook project. All content creation, review, and publication must verify compliance with these principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Amendments require**: Clear justification, impact analysis, user approval, and documentation in project ADRs.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
